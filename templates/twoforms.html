@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% set active_page = "twoforms" %}
+
+{% block title %}Two Forms{% endblock %}
+
+{% block head %}
+{{ super() }}
+
+
+{% endblock %}
+
+{% block page_content %}
+<h1 class="cap">Get in Touch</h1>
+<br>
+{% if message %}
+{{ message }}
+{% endif %}
+{% if yournum %}
+{% endif %}
+
+<h3>Enter your details</h3>
+<form action="/form2" method="post">
+    <label>E-mail:&nbsp;</label><input type="text" name="Email" required />
+    <br>
+    <br>
+    <label>Name:&nbsp;</label><input type="text" name="Name" required />
+    <br><br>
+    <input type="submit">
+</form>
+
+
+
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+
+
+{% endblock %}
